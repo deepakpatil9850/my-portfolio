@@ -21,10 +21,11 @@ const page = () => {
           fascinated on user interfaces.
         </p>
         <p>
-          I hold a <span className="text-theme">MCA</span> degree, which gave me
-          the foundation I needed — but most of what I&apos;ve learned has come
-          from building real projects, solving real problems, and constantly
-          challenging myself to get better.
+          I hold a <span className="text-theme">MCA</span> degree from{" "}
+          <span className="text-theme">Govt. College of Engineering Karad</span>
+          , which gave me the foundation I needed — but most of what I&apos;ve
+          learned has come from building real projects, solving real problems,
+          and constantly challenging myself to get better.
         </p>
         <p>
           For me, frontend development is more than just writing code —

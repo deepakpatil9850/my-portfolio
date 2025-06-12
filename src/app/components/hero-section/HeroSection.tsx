@@ -66,7 +66,10 @@ const HeroSection = () => {
             CSS, and other modern tools.
           </p>
           <div>
-            <DownloadBtn> Download</DownloadBtn>
+            <DownloadBtn backendUrl={process.env.BACKEND_URL as string}>
+              {" "}
+              Download
+            </DownloadBtn>
             <Link href="#contact">
               <Button label="Contact" theme={true} />
             </Link>

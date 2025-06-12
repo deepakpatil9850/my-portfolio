@@ -1,26 +1,34 @@
 "use client";
-
 import React, {useState} from "react";
 import {Document, Page, pdfjs} from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-import DownloadBtn from "../components/DownloadBtn";
-import {Download} from "lucide-react";
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
 
-const ViewPDF = () => {
+interface PdfViewerProps {
+  fileUrl: string;
+}
+
+const PdfViewer = ({fileUrl}: PdfViewerProps) => {
   const [numPages, setNumPages] = useState<number>();
-
-  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
+  const [loading, setLoading] = useState(true);
 
   function onDocumentLoadSuccess({numPages}: {numPages: number}): void {
     setNumPages(numPages);
+    setLoading(false);
   }
 
   return (
-    <div className="grid justify-center items-center">
+    <div className="grid justify-center items-center min-h-full">
+      {loading && (
+        <div className="animate-pulse max-w-max overflow-auto grid gap-3 text-center">
+          <div className="h-[600px] w-[500px] bg-gray-300 rounded-lg mb-4" />
+          <div className="h-[600px] w-[500px] bg-gray-300 rounded-lg" />
+        </div>
+      )}
       <Document
-        file="/resume.pdf"
+        file={fileUrl}
         onLoadSuccess={onDocumentLoadSuccess}
         className=" max-w-max overflow-auto grid gap-3 text-center"
       >
@@ -35,14 +43,8 @@ const ViewPDF = () => {
             </div>
           ))}
       </Document>
-      <div className="text-right mt-3">
-        <DownloadBtn>
-          <p className=" inline">Download</p>{" "}
-          <Download className="inline-block ml-2" />
-        </DownloadBtn>
-      </div>
     </div>
   );
 };
 
-export default ViewPDF;
+export default PdfViewer;

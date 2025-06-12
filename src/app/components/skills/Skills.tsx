@@ -14,6 +14,10 @@ const Skills = () => {
       src: "/ts.png",
     },
     {
+      name: "MongoDB",
+      src: "/mongo.png",
+    },
+    {
       name: "React",
       src: "/react.png",
     },
