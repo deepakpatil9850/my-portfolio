@@ -20,7 +20,7 @@ const PdfViewer = ({fileUrl}: PdfViewerProps) => {
   }
 
   return (
-    <div className="grid justify-center items-center min-h-full">
+    <div className="grid justify-center items-center min-h-[100vh]">
       {loading && (
         <div className="animate-pulse max-w-max overflow-auto grid gap-3 text-center">
           <div className="h-[600px] w-[500px] bg-gray-300 rounded-lg mb-4" />

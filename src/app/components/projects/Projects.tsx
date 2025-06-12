@@ -10,7 +10,7 @@ const Projects = () => {
       projectOrder: 1,
       projectImgSrc: "/blinkeyitProject.png",
       projectTitle: "Blinkeyit",
-      sourceLink: " ",
+      sourceLink: "https://github.com/deepakpatil9850/blinkeyit-ecom",
       techStack: ["React", "tailwind"],
       description: "this is e-commerce website",
       projectLink: "https://blinkeyit-d8ih.vercel.app/",
@@ -28,10 +28,10 @@ const Projects = () => {
       projectOrder: 3,
       projectImgSrc: "/portfolioImg.png",
       projectTitle: "Portfolio",
-      sourceLink: "   ",
+      sourceLink: "https://github.com/deepakpatil9850/my-portfolio ",
       techStack: ["Next JS", "Tailwind"],
       description: "this is my Portfolio website",
-      projectLink: " ",
+      projectLink: "/",
     },
     {
       projectOrder: 4,
@@ -50,6 +50,7 @@ const Projects = () => {
       techStack: ["React", "Tailwind"],
       description: "this project is under construction ",
       projectLink: "https://youtube-lite-psi.vercel.app/",
+      isUnderConstruct: true,
     },
   ];
   return (
@@ -64,6 +65,7 @@ const Projects = () => {
             projectTitle={project.projectTitle}
             techStack={project.techStack}
             sourceLink={project.sourceLink}
+            isUnderConstruct={project.isUnderConstruct}
           />
         ))}
       </div>
@@ -78,6 +80,7 @@ interface CardPropsTypes {
   techStack?: string[] | undefined;
   description: string;
   projectLink: string;
+  isUnderConstruct?: boolean;
 }
 
 const Card = ({
@@ -87,6 +90,7 @@ const Card = ({
   techStack,
   description,
   projectLink,
+  isUnderConstruct,
 }: CardPropsTypes) => {
   return (
     <div className="border border-tertiary  overflow-hidden bg-background rounded-2xl flex flex-col max-w-md min-w-[250px]">
@@ -96,7 +100,9 @@ const Card = ({
           width={500}
           height={300}
           alt=""
-          className="object-cover border-b border-b-secondary"
+          className={`object-cover border-b border-b-secondary ${
+            isUnderConstruct ? "blur-sm" : " "
+          } `}
         />
       </Link>
 
@@ -105,7 +111,7 @@ const Card = ({
           <h6 className="mb-2">{projectTitle}</h6>
           {sourceLink !== undefined && sourceLink.trim() !== "" && (
             <Link href={sourceLink} target="_blank">
-              <button className="text-sm py-0.5 px-2 rounded-2xl border border-secondary text-primary">
+              <button className="text-sm py-0.5 px-2 hover:bg-tertiary cursor-pointer rounded-2xl border border-secondary text-primary">
                 source{" "}
                 <ExternalLink strokeWidth={1} size={16} className="inline" />
               </button>

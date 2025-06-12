@@ -2,31 +2,38 @@ import React from "react";
 
 import Image from "next/image";
 import SectionLayout from "../SectionLayout";
+import Link from "next/link";
 
 const WorkHistory = () => {
   return (
     <SectionLayout heading="Work Experience">
       <div className="border border-tertiary rounded-4xl p-5 md:p-10 bg-background">
-        <div className="flex text-primary mb-5">
-          <div className="flex justify-center items-center">
-            <Image
-              src="/company-logo.png"
-              width={100}
-              height={100}
-              alt="Shilpra Web Technologies"
-              className="mr-5"
-            />
+        <Link
+          href="https://shilprawebtechnologies.com/"
+          target="_blank"
+          className="cursor-pointer"
+        >
+          <div className="flex text-primary mb-5">
+            <div className="flex justify-center items-center">
+              <Image
+                src="/company-logo.png"
+                width={100}
+                height={100}
+                alt="Shilpra Web Technologies"
+                className="mr-5"
+              />
+            </div>
+            <div>
+              <h4 className="font-mono text-foreground tracking-tight font-bold">
+                Shilpra Web Technologies
+              </h4>
+              <h6 className="font-nova text-primary ">Software Developer</h6>
+              <time className="text-sm text-primary mt-2 tracking-widest uppercase">
+                Jan - 2024 to <span className="text-theme">Present</span>
+              </time>
+            </div>
           </div>
-          <div>
-            <h4 className="font-mono text-foreground tracking-tight font-bold">
-              Shilpra Web Technologies
-            </h4>
-            <h6 className="font-nova text-primary ">Software Developer</h6>
-            <time className="text-sm text-primary mt-2 tracking-widest uppercase">
-              Jan - 2024 to <span className="text-theme">Present</span>
-            </time>
-          </div>
-        </div>
+        </Link>
         <div className="ml-5 sm:ml-20 md:ml-30">
           <ul className=" list-disc text-primary">
             <li>
