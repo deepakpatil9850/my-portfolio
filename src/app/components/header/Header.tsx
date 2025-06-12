@@ -4,9 +4,11 @@ import {X, MenuIcon} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, {useState} from "react";
+import NavLink from "../NavLink";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+
   const handleMenuClick = () => {
     setShowMenu((prev) => !prev);
   };
@@ -34,14 +36,9 @@ const Header = () => {
       <div className="sm:block hidden">
         <ul className="flex gap-x-12">
           {menuList.map(({name, pageLink}) => (
-            <Link
-              href={pageLink}
-              about=""
-              key={name}
-              className="hover:text-theme duration-300 active:text-theme"
-            >
+            <NavLink href={pageLink} key={name}>
               <li>{name}</li>
-            </Link>
+            </NavLink>
           ))}
         </ul>
       </div>
@@ -58,15 +55,9 @@ const Header = () => {
       >
         <ul className="flex flex-col gap-10 items-center">
           {menuList.map(({name, pageLink}) => (
-            <Link
-              href={pageLink}
-              about=""
-              key={name}
-              className="hover:text-theme duration-300 active:text-theme"
-              onClick={() => closeMenu()}
-            >
+            <NavLink href={pageLink} key={name} onClick={() => closeMenu()}>
               <li>{name}</li>
-            </Link>
+            </NavLink>
           ))}
         </ul>
         <button

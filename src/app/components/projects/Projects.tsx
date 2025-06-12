@@ -12,7 +12,8 @@ const Projects = () => {
       projectTitle: "Blinkeyit",
       sourceLink: "https://github.com/deepakpatil9850/blinkeyit-ecom",
       techStack: ["React", "tailwind"],
-      description: "this is e-commerce website",
+      description:
+        "this is e-commerce website this is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce website",
       projectLink: "https://blinkeyit-d8ih.vercel.app/",
     },
     {
@@ -55,7 +56,7 @@ const Projects = () => {
   ];
   return (
     <SectionLayout heading="Projects">
-      <div className="grid gap-6 justify-center items-center md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 justify-center items-start md:grid-cols-2 lg:grid-cols-3">
         {projectList.map((project) => (
           <Card
             key={project.projectOrder}
