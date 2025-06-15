@@ -11,9 +11,17 @@ const Projects = () => {
       projectImgSrc: "/blinkeyitProject.png",
       projectTitle: "Blinkeyit",
       sourceLink: "https://github.com/deepakpatil9850/blinkeyit-ecom",
-      techStack: ["React", "tailwind"],
+      techStack: [
+        "React",
+        "Redux",
+        "Tailwind",
+        "Axios",
+        "Node JS",
+        "Express",
+        "MongoDB",
+      ],
       description:
-        "this is e-commerce website this is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce websitethis is e-commerce website",
+        "This is e-commerce Project enabling users to browse and purchase products across various categories. Implemented key functionalities such as user authentication, product search, cart management, admin dashboard, product management, order management and a secure payment process",
       projectLink: "https://blinkeyit-d8ih.vercel.app/",
     },
     {
@@ -21,17 +29,19 @@ const Projects = () => {
       projectImgSrc: "/movix.png",
       projectTitle: "Movix",
       sourceLink: "https://github.com/deepakpatil9850/movixGpt",
-      techStack: ["React", "tailwind", "Redux"],
-      description: "this is Movie trailer showcase website",
+      techStack: ["React", "Redux", "SCSS", "Axios", "Rest API"],
+      description:
+        "In this project I have implemented suspense, shimmer UI and lazy loading Developed mobile-first and responsive web design that adapt fluidly to various screen sizes and orientation, ensuring a consistent user experience across devices and Implemented efficient advanced search technique to increase web app performance",
       projectLink: "https://movix-deepak.vercel.app/",
     },
     {
       projectOrder: 3,
       projectImgSrc: "/portfolioImg.png",
       projectTitle: "Portfolio",
-      sourceLink: "https://github.com/deepakpatil9850/my-portfolio ",
-      techStack: ["Next JS", "Tailwind"],
-      description: "this is my Portfolio website",
+      sourceLink: "https://github.com/deepakpatil9850/my-portfolio",
+      techStack: ["Next JS", "Tailwind", "Typescript", "Rest API", "AWS S3"],
+      description:
+        "This is my Portfolio website, It has dark mode, dynamic routing, and responsive design. It is built using Next.js and Tailwind CSS, showcasing my skills and projects effectively.It has view and download resume feature, which allows users to view and download my resume directly from the website.",
       projectLink: "/",
     },
     {
@@ -39,18 +49,26 @@ const Projects = () => {
       projectImgSrc: "/yt.png",
       projectTitle: "Youtube UI clone",
       sourceLink: "https://github.com/deepakpatil9850/youtube_lite",
-      techStack: ["React", "Tailwind"],
-      description: "this is youtube clone website",
+      techStack: ["React", "Tailwind", "Axios", "Context API"],
+      description:
+        "This is youtube clone project,It has search feature using realtime youtube suggestions API Improved web app performance by implementing rendering while fetching technique using suspense, shimmer UI and lazy loading. Created responsive components applying Mobile first design approach",
       projectLink: "https://youtube-lite-psi.vercel.app/",
     },
     {
       projectOrder: 5,
-      projectImgSrc: "/yt.png",
+      projectImgSrc: "/blinkeyitProject.png",
       projectTitle: "Dashboard UI",
-      sourceLink: "   ",
-      techStack: ["React", "Tailwind"],
-      description: "this project is under construction ",
-      projectLink: "https://youtube-lite-psi.vercel.app/",
+      sourceLink: " ",
+      techStack: [
+        "Next JS",
+        "Tailwind",
+        "Material UI",
+        "Typescript",
+        "Storybook",
+      ],
+      description:
+        "This project is under construction. It has a dashboard UI built using Next.js, Tailwind CSS, Material UI, and Typescript. It includes various components and features for managing data and visualizing information effectively.  I will update it soon.",
+      projectLink: "",
       isUnderConstruct: true,
     },
   ];
@@ -102,14 +120,14 @@ const Card = ({
           height={300}
           alt=""
           className={`object-cover border-b border-b-secondary ${
-            isUnderConstruct ? "blur-sm" : " "
+            isUnderConstruct ? "blur-lg" : " "
           } `}
         />
       </Link>
 
       <div className="p-2">
-        <div className="flex justify-between items-center">
-          <h6 className="mb-2">{projectTitle}</h6>
+        <div className="flex justify-between items-center p-2">
+          <h6 className=" ">{projectTitle}</h6>
           {sourceLink !== undefined && sourceLink.trim() !== "" && (
             <Link href={sourceLink} target="_blank">
               <button className="text-sm py-0.5 px-2 hover:bg-tertiary cursor-pointer rounded-2xl border border-secondary text-primary">
@@ -119,7 +137,7 @@ const Card = ({
             </Link>
           )}
         </div>
-        <p className="text-justify text-sm text-primary">{description}</p>
+        <p className="text-justify text-sm text-primary p-1">{description}</p>
         <div className="flex flex-wrap gap-1 text-xs mt-1 text-primary">
           {techStack?.map((tech) => (
             <p

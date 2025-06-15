@@ -11,14 +11,11 @@ const Contact = () => {
         <ContactForm />
         <div className="flex flex-wrap justify-between gap-2 md:gap-5 ">
           <SocialLinks
-            href="https://www.linkedin.com/in/deepak-patil-4111deep/"
-            icon={<Linkedin />}
+            icon={<Mail />}
+            href="mailto:deepakpatil4111@gmail.com"
             target="_blank"
           >
-            Linkedin
-          </SocialLinks>
-          <SocialLinks href="" icon={<Twitter />}>
-            Twitter
+            <p>deepakpatil4111@gmail.com</p>
           </SocialLinks>
           <SocialLinks
             href="https://www.instagram.com/mr._deep__patil__/?hl=en"
@@ -35,11 +32,14 @@ const Contact = () => {
             <p>+91 9850624107</p>
           </SocialLinks>
           <SocialLinks
-            icon={<Mail />}
-            href="mailto:deepakpatil4111@gmail.com"
+            href="https://www.linkedin.com/in/deepak-patil-4111deep/"
+            icon={<Linkedin />}
             target="_blank"
           >
-            <p>deepakpatil4111@gmail.com</p>
+            Linkedin
+          </SocialLinks>
+          <SocialLinks href="" icon={<Twitter />}>
+            Twitter
           </SocialLinks>
         </div>
       </div>
