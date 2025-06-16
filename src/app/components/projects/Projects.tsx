@@ -74,7 +74,7 @@ const Projects = () => {
   ];
   return (
     <SectionLayout heading="Projects">
-      <div className="grid gap-6 justify-center items-start md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 sm:gap-6 justify-center items-start md:grid-cols-2 lg:grid-cols-3">
         {projectList.map((project) => (
           <Card
             key={project.projectOrder}
@@ -112,7 +112,7 @@ const Card = ({
   isUnderConstruct,
 }: CardPropsTypes) => {
   return (
-    <div className="border border-tertiary  overflow-hidden bg-background rounded-2xl flex flex-col max-w-md min-w-[250px]">
+    <div className="border border-secondary  overflow-hidden bg-background rounded-2xl flex flex-col max-w-md min-w-[250px]">
       <Link href={projectLink} target="_blank">
         <Image
           src={projectImgSrc}

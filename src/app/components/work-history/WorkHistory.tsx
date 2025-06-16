@@ -7,7 +7,7 @@ import Link from "next/link";
 const WorkHistory = () => {
   return (
     <SectionLayout heading="Work Experience">
-      <div className="border border-tertiary rounded-4xl p-5 md:p-10 bg-background">
+      <div className="border border-tertiary rounded-4xl p-5 md:p-10 bg-background text-justi fy tracking-tight">
         <Link
           href="https://shilprawebtechnologies.com/"
           target="_blank"
@@ -24,7 +24,7 @@ const WorkHistory = () => {
               />
             </div>
             <div>
-              <h4 className="font-mono text-foreground tracking-tight font-bold">
+              <h4 className="font-mono text-foreground tracking-tight font-bold text-left">
                 Shilpra Web Technologies
               </h4>
               <h6 className="font-nova text-primary ">Software Developer</h6>
@@ -34,8 +34,8 @@ const WorkHistory = () => {
             </div>
           </div>
         </Link>
-        <div className="ml-5 sm:ml-20 md:ml-30">
-          <ul className=" list-disc text-primary">
+        <div className=" sm:ml-20 md:ml-30">
+          <ul className=" sm:list-disc text-primary">
             <li>
               <p>Assist in project planning and scope definition. </p>
             </li>

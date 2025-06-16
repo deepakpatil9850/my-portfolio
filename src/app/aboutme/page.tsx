@@ -6,8 +6,8 @@ const page = () => {
     <div className="grid md:grid-cols-3 gap-5 bg-background text-primary rounded-3xl p-8 mb-6">
       <div className=" grid justify-center">
         <Image
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           alt="Deepak Pic"
           src="/deepak.jpg"
           className="rounded-4xl"

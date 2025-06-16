@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex w-full h-full justify-center items-center mt-20 sm:mt-5 md:mt-0">
       <Image
         src="/underConstruction.png"
         width={600}

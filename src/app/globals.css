@@ -17,7 +17,7 @@ body::-webkit-scrollbar-button {
   --secondary: #c6c6c6;
   --tertiary: #ececec;
   --background: #ffffff;
-  --theme: #00ffe1;
+  --theme: #00c6ed;
 }
 
 @theme inline {
@@ -54,7 +54,7 @@ body::-webkit-scrollbar-button {
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: #ffffff;
-    --primary: #a4a4a4;
+    --primary: #b3b3b3;
     --secondary: #353535;
     --tertiary: #141414;
     --background: #000000;
@@ -65,7 +65,7 @@ body::-webkit-scrollbar-button {
 body {
   background-color: var(--background);
   background-image: url("/noise.png");
-  background-size: 200px;
+  background-size: 250px;
   background-repeat: repeat;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
