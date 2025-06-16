@@ -9,6 +9,7 @@ const page = () => {
         width={600}
         height={500}
         alt="under construction"
+        priority={true}
       />
     </div>
   );

@@ -62,7 +62,8 @@ const HeroSection = () => {
           alt="profile pic"
           width={300}
           height={300}
-          className="rounded-full absolute p-2 top-0 left-0  "
+          className="rounded-full absolute p-2 top-0 left-0"
+          priority={true}
         />
       </div>
     </section>

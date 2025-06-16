@@ -11,6 +11,7 @@ const page = () => {
           alt="Deepak Pic"
           src="/deepak.jpg"
           className="rounded-4xl"
+          priority={true}
         />
       </div>
       <div className=" md:col-span-2 text-justify md:border-l-2 md:pl-6 grid  gap-2 tracking-tight text-sm">
