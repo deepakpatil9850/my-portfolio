@@ -16,9 +16,9 @@ const HeroSection = () => {
   return (
     <section className="flex md:flex-row flex-col-reverse md:items-center items-center md:justify-center justify-between gap-x-12">
       <div className="lg:max-w-2xl max-w-2xl">
-        <div className="">
+        <div className="text-lg">
           <p className={` font-nova sm:mb-2.5 text-primary`}>
-            Hey there!, My name is
+            Hey there!👋🏼, I&apos;m
           </p>
           <h1
             className={`${iceland.className} tracking-tight text-6xl sm:text-5xl md:text-7xl  sm:mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full font-extrabold dark:text-theme `}
@@ -26,10 +26,10 @@ const HeroSection = () => {
             Deepak Patil
           </h1>
           <p className={` text-primary mb-4 font-nova text-justify`}>
-            I&apos;m a frontend developer who loves bringing ideas to life
-            through code. I specialize in crafting clean, responsive, and
-            user-friendly web applications using React.js, JavaScript, Tailwind
-            CSS, and other modern tools.
+            A frontend developer who loves bringing ideas to life through code.
+            I specialize in crafting clean, responsive, and user-friendly web
+            applications using React.js, JavaScript, Tailwind CSS, and other
+            modern tools.
           </p>
           <div>
             <Link

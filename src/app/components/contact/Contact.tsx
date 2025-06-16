@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <SectionLayout heading="Contact" id="contact">
+    <SectionLayout heading="Get In Touch" id="contact">
       <div className="">
         <ContactForm />
         <div className="flex flex-wrap justify-between gap-2 md:gap-5 ">

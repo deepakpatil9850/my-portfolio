@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const WorkHistory = () => {
   return (
-    <SectionLayout heading="Work Experience">
+    <SectionLayout heading="My Work Experience">
       <div className="border border-tertiary rounded-4xl p-5 md:p-10 bg-background text-justi fy tracking-tight">
         <Link
           href="https://shilprawebtechnologies.com/"
