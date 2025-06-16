@@ -14,7 +14,7 @@ const ViewResume = async () => {
         <Link
           href="https://deepak-patil.s3.ap-south-1.amazonaws.com/resume.pdf"
           target="_blank"
-          className="fixed right-7 bottom-7 border-secondary border-2  py-3  rounded-full bg-background cursor-pointer px-3.5 hover:border-foreground animate-bounce anima"
+          className="fixed right-7 bottom-7 border-secondary border-2  py-3  rounded-full bg-background cursor-pointer px-3.5 hover:border-foreground animate-bounce anima z-50"
         >
           <button className="cursor-pointer">
             <Download />
