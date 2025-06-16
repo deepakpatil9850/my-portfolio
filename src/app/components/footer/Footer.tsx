@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="text-center py-3 border border-tertiary bg-background text-primary rounded-3xl text-sm font-mono">
       <p>
-        Made with ❤️ by <span className="text-theme">Deepak Patil </span>2025
+        Made with 🩵 by <span className="text-theme">Deepak Patil </span>2025
       </p>
     </footer>
   );

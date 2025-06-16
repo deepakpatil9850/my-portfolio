@@ -26,7 +26,7 @@ const HeroSection = () => {
             Deepak Patil
           </h1>
           <p className={` text-primary mb-4 font-nova text-justify`}>
-            A frontend developer who loves bringing ideas to life through code.
+            A frontend developer who loves bringing ideas to life through code .
             I specialize in crafting clean, responsive, and user-friendly web
             applications using React.js, JavaScript, Tailwind CSS, and other
             modern tools.

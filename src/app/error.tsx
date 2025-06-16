@@ -1,30 +1,23 @@
 "use client"; // Error boundaries must be Client Components
 
-import {useEffect} from "react";
+import Image from "next/image";
+import Button from "./components/Button";
+import {useRouter} from "next/navigation";
 
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & {digest?: string};
-  reset: () => void;
-}) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error);
-  }, [error]);
+export default function Error() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/");
+  };
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-        Try again
-      </button>
+    <div className="w-full h-full grid justify-center items-center">
+      <Image src="/error.png" alt="error" width={200} height={500} />
+      <h2 className="text-xs">
+        <span className="text-3xl">Oops </span>Something went wrong!
+      </h2>
+      <Button label="Try Again" handleClick={handleClick}></Button>
     </div>
   );
 }
