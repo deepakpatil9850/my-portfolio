@@ -8,7 +8,7 @@ const Projects = () => {
   const projectList = [
     {
       projectOrder: 1,
-      projectImgSrc: "/blinkeyitProject.png",
+      projectImgSrc: "/blinkeyitProject.jpeg",
       projectTitle: "Blinkeyit",
       sourceLink: "https://github.com/deepakpatil9850/blinkeyit-ecom",
       techStack: [
@@ -26,7 +26,7 @@ const Projects = () => {
     },
     {
       projectOrder: 2,
-      projectImgSrc: "/movix.png",
+      projectImgSrc: "/movix.jpeg",
       projectTitle: "Movix",
       sourceLink: "https://github.com/deepakpatil9850/movixGpt",
       techStack: ["React", "Redux", "SCSS", "Axios", "Rest API"],
@@ -36,7 +36,7 @@ const Projects = () => {
     },
     {
       projectOrder: 3,
-      projectImgSrc: "/portfolioImg.png",
+      projectImgSrc: "/portfolio.jpeg",
       projectTitle: "Portfolio",
       sourceLink: "https://github.com/deepakpatil9850/my-portfolio",
       techStack: ["Next JS", "Tailwind", "Typescript", "Rest API", "AWS S3"],
@@ -46,7 +46,7 @@ const Projects = () => {
     },
     {
       projectOrder: 4,
-      projectImgSrc: "/yt.png",
+      projectImgSrc: "/yt.jpeg",
       projectTitle: "Youtube UI clone",
       sourceLink: "https://github.com/deepakpatil9850/youtube_lite",
       techStack: ["React", "Tailwind", "Axios", "Context API"],
@@ -56,7 +56,7 @@ const Projects = () => {
     },
     {
       projectOrder: 5,
-      projectImgSrc: "/blinkeyitProject.png",
+      projectImgSrc: "/blinkeyitProject.jpeg",
       projectTitle: "Dashboard UI",
       sourceLink: " ",
       techStack: [

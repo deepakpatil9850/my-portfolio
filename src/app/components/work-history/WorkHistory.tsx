@@ -5,9 +5,10 @@ import SectionLayout from "../SectionLayout";
 import Link from "next/link";
 
 const WorkHistory = () => {
+  const JOINING_DATE = process.env.DATE_OF_JOINING || "Jan - 2024";
   return (
     <SectionLayout heading="My Work Experience">
-      <div className="border border-tertiary rounded-4xl p-5 md:p-10 bg-background text-justi fy tracking-tight">
+      <div className="border border-tertiary rounded-4xl p-5 md:p-10 bg-background text-justify tracking-tight">
         <Link
           href="https://shilprawebtechnologies.com/"
           target="_blank"
@@ -29,7 +30,7 @@ const WorkHistory = () => {
               </h4>
               <h6 className="font-nova text-primary ">Software Developer</h6>
               <time className="text-sm text-primary mt-2 tracking-widest uppercase">
-                Jan - 2024 to <span className="text-theme">Present</span>
+                {JOINING_DATE} to <span className="text-theme">Present</span>
               </time>
             </div>
           </div>

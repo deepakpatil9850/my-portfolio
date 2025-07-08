@@ -58,12 +58,12 @@ const HeroSection = () => {
           <div className="w-full h-[50%] bg-background  "></div>
         </div>
         <Image
-          src="/profile-pic.png"
+          src="/profile-pic.jpg"
           alt="profile pic"
           width={300}
           height={300}
           className="rounded-full absolute p-2 top-0 left-0"
-          priority={true}
+          priority
         />
       </div>
     </section>

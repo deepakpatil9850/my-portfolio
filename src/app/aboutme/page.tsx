@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 const page = () => {
+  const DEGREE = process.env.DEGREE || "MCA";
+  const COLLEGE = process.env.COLLEGE || "Govt. College of Engineering Karad";
   return (
     <div className="grid md:grid-cols-3 gap-5 bg-background text-primary rounded-3xl p-8 mb-6">
       <div className=" grid justify-center">
@@ -22,11 +24,11 @@ const page = () => {
           fascinated on user interfaces.
         </p>
         <p>
-          I hold a <span className="text-theme">MCA</span> degree from{" "}
-          <span className="text-theme">Govt. College of Engineering Karad</span>
-          , which gave me the foundation I needed — but most of what I&apos;ve
-          learned has come from building real projects, solving real problems,
-          and constantly challenging myself to get better.
+          I hold a <span className="text-theme">{DEGREE}</span> degree from{" "}
+          <span className="text-theme">{COLLEGE}</span>, which gave me the
+          foundation I needed — but most of what I&apos;ve learned has come from
+          building real projects, solving real problems, and constantly
+          challenging myself to get better.
         </p>
         <p>
           For me, frontend development is more than just writing code —
