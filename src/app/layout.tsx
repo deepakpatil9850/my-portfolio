@@ -25,8 +25,30 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Deep's Portfolio",
-  description: "Deepak Patil Portfolio website",
+  title: "Deepak's Portfolio",
+  description: "Welcome to my portfolio website showcasing my work and skills.",
+  openGraph: {
+    title: "Deepak's Portfolio",
+    description: "Explore my projects, experience, and contact details.",
+    url: "https://deepakpatil.online",
+    siteName: "Deepak's Portfolio",
+    images: [
+      {
+        url: "https://deepakpatil.online/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Deepak's Portfolio Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Deepak's Portfolio",
+    description: "Explore my projects, experience, and contact details.",
+    images: ["https://deepakpatil.online/og-image.png"],
+  },
 };
 
 export default function RootLayout({
