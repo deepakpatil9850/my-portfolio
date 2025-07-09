@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     siteName: "Deepak's Portfolio",
     images: [
       {
-        url: "https://deepakpatil.online/og-image.png",
+        url: "https://deepakpatil.online/og-image.jpeg",
         width: 1200,
-        height: 630,
+        height: 500,
         alt: "Deepak's Portfolio Logo",
       },
     ],
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Deepak's Portfolio",
     description: "Explore my projects, experience, and contact details.",
-    images: ["https://deepakpatil.online/og-image.png"],
+    images: ["https://deepakpatil.online/og-image.jpeg"],
   },
 };
 
