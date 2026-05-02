@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface ButtonProps {
   label: string;
@@ -11,7 +12,9 @@ interface ButtonProps {
 
 const Button = ({label, handleClick, theme, children}: ButtonProps) => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       onClick={handleClick}
       className={`${
         theme
@@ -20,7 +23,7 @@ const Button = ({label, handleClick, theme, children}: ButtonProps) => {
       }   px-7 bg-background py-3 rounded-3xl m-2 transition duration-500 cursor-pointer`}
     >
       {children} {label}
-    </button>
+    </motion.button>
   );
 };
 

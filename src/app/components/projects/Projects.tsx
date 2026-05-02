@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import SectionLayout from "../SectionLayout";
 import Image from "next/image";
 import {ExternalLink} from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projectList = [
@@ -72,9 +74,25 @@ const Projects = () => {
       isUnderConstruct: true,
     },
   ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <SectionLayout heading="Projects">
-      <div className="grid gap-12 sm:gap-6 justify-center items-start md:grid-cols-2 lg:grid-cols-3">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="grid gap-12 sm:gap-6 justify-center items-start md:grid-cols-2 lg:grid-cols-3"
+      >
         {projectList.map((project) => (
           <Card
             key={project.projectOrder}
@@ -87,7 +105,7 @@ const Projects = () => {
             isUnderConstruct={project.isUnderConstruct}
           />
         ))}
-      </div>
+      </motion.div>
     </SectionLayout>
   );
 };
@@ -111,8 +129,17 @@ const Card = ({
   projectLink,
   isUnderConstruct,
 }: CardPropsTypes) => {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div className="border border-secondary  overflow-hidden bg-background rounded-2xl flex flex-col max-w-md min-w-[250px]">
+    <motion.div 
+      variants={itemVariants}
+      whileHover={{ y: -10, transition: { duration: 0.2 } }}
+      className="border border-secondary overflow-hidden bg-background rounded-2xl flex flex-col max-w-md min-w-[250px]"
+    >
       <Link href={projectLink} target="_blank">
         <Image
           src={projectImgSrc}
@@ -149,7 +176,7 @@ const Card = ({
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
